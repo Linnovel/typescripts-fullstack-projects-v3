@@ -1,5 +1,6 @@
-import { sumar } from "./server"
+import server from './server'
 
-console.log('desde index.ts')
-
+server.listen(4000, () => {
+    console.log('rest api en el puerto 4mil')
+})
 
