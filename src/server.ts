@@ -4,22 +4,24 @@ import db from './config/db'
 import colors from 'colors'
 
 //Conectar a base de datos
-async function connectDb() {
+async function connectDB() {
     try {
         await db.authenticate()
         db.sync()
-        console.log(colors.bgGreen.bold,'Conexion exitosa a la bse de datos')
+        console.log( colors.blue( 'Conexión exitosa a la BD'))
     } catch (error) {
-        console.log(colors.bgRed.white ,'hubo un error al conectar a la bse de datos', error)
+        // console.log(error)
+        console.log( colors.red.bold( 'Hubo un error al conectar a la BD') )
     }
 }
+connectDB()
 
-connectDb()
-
-const server = express();
+// Instancia de express
+const server = express()
 
 //Routing
-server.use('/', router)
+server.use('/api/products', router)
+
 
 
 
