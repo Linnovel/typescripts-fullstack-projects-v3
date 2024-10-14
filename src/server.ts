@@ -19,6 +19,9 @@ connectDB()
 // Instancia de express
 const server = express()
 
+//Leer datos de formulario
+server.use(express.json())
+
 //Routing
 server.use('/api/products', router)
 
