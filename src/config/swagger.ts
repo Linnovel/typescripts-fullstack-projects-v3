@@ -7,7 +7,7 @@ const options : swaggerJSDoc.Options = {
         tags: [
             {
                 name : 'Products',
-                description : 'API opperations related to products'
+                description : 'API operations related to products'
             }
         ],
         info : {

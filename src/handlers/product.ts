@@ -12,7 +12,7 @@ export const getProducts = async (req:Request, res : Response) => {
     try {
         const product = await Product.findAll({
             order : [
-                ['price', 'DES']
+                ['price', 'DESC']
             ],
             attributes : {exclude : ['createdAt' , 'updatedAt', 'availability']}
         })
